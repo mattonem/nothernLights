@@ -24,7 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      - name: BrowserStack Action
+        uses: 'browserstack/github-actions@master'
+        with:
+          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       # Runs a set of commands using the runners shell
       - name: exec
         run: |
