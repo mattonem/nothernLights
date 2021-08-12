@@ -22,7 +22,7 @@ describe('nothernlights', function() {
   })
   it('nothernlights', async function() {
     await driver.get("https://www.softservenews.com/")
-    let element = await driver.findElement(By.css(".HideInfo1:nth-child(8)")));
+    let element = await driver.findElement(By.css(".HideInfo1:nth-child(8)"));
     await driver.executeScript("arguments[0].scrollIntoView()", element);
     await driver.findElement(By.css(".HideInfo1:nth-child(8) > b:nth-child(1)")).getText()
     await driver.findElement(By.css(".HideInfo1:nth-child(8) > b:nth-child(2)")).getText()
